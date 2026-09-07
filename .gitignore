@@ -1,0 +1,10 @@
+# MacOS
+.DS_Store
+
+# Vim
+.netrwhist
+.viminfo
+
+# zsh generated state
+.zsh_sessions/
+.zcompdump*
