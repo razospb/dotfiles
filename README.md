@@ -289,7 +289,7 @@ Clone the repository into:
 For example:
 
 ```zsh
-git clone <repository-url> ~/dotfiles
+git clone https://github.com/razospb/dotfiles.git ~/dotfiles
 ```
 
 ### 3. Back up existing configuration
