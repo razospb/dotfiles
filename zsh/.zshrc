@@ -180,6 +180,33 @@ zle -N edit-command-line
 bindkey '^x^e' edit-command-line
 
 #------------------------------------------------------------------------------
+# DOCKER
+#------------------------------------------------------------------------------
+alias dps='sudo docker ps'            # List all containers (running)
+alias dpsa='sduo docker ps -a'        # LIst all containers (running and stopped)
+alias dpss='sudo docker ps -a --format "table {{.Names}}\t{{.State}}\t{{.Status}}\t{{.Ports}}" | (sed -u 1q; sort)'
+alias ddf='sudo docker system df'     # Show Docker disk usage for containers, images, and volumes
+alias dexec='sudo docker exec -it'    # Execute command in running container (interactive mode)
+alias dkomodo='sudo docker compose --env-file compose.env -f mongo.compose.yaml'
+
+# Docker Logs and Monitoring
+alias dlogs='sudo docker logs -tf --tail="50"'
+alias dlogsize='sudo du -ch $(sudo docker isnpect --format '{{.LogPath}}''
+alias dips='sudo docker ps -q | xargs -n 1 sudo docker inspect -f '{{.Name}}%tab%{{range .NetworkSettings.Networks}}{{.IPAddress}}%tab%{{end}}''
+
+# Docker Container Management
+alias dstop='sudo docker stop'
+alias dstopall='sudo docker stop $(sudo docker ps -aq)'
+alias drm='sudo docker rm $(sudo docker ps -a -q)'
+
+# Docker Cleanup and Maintenance
+alias dprunevol='sudo docker volume prune'
+alias dprunesys='sudo docker system prune -a'
+alias ddelimages='sudo docker rmi $(sudo docker images -q)'
+alias derase='dstopall ; drm ; ddelimages ; dprunevol ; dprunesys'
+alias dprune='ddelimages ; dprunevol ; dprunesys'
+
+#------------------------------------------------------------------------------
 # SYSTEM ADMINISTRATION
 #------------------------------------------------------------------------------
 
