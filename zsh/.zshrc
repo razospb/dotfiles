@@ -221,6 +221,10 @@ alias up='cd ..'        # Alternative way to move up one directory
 alias back='cd -'       # Return to previous directory (toggles between last two directories)
 alias home='cd ~'       # Navigate to home directory
 alias c='clear'         # Clear terminal contents
+alias cdh='cd /home/sbrazo/docker' # Navigate to the Docker folder
+alias cdda='cd /home/sbrazo/docker/data' # Navigate to the Data folder
+alias cdst='cd /home/sbrazo/docker/stacks' # Navigate to the Stacks folder
+alias cdse='cd /home/sbrazo/docker/secrets' # Navigate to the Stacks folder
 
 #------------------------------------------------------------------------------
 # MODERN CLI REPLACEMENTS
