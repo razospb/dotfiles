@@ -128,17 +128,23 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
 # History
-HISTSIZE=5000
+HISTSIZE=100000
 HISTFILE="$HOME/.zsh_history"
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+
+# Shell behavior
+setopt AUTOCD
+setopt NOBEEP
+setopt NUMERIC_GLOB_SORT
 
 # Shell Integrations
 eval "$(fzf --zsh)"
@@ -158,6 +164,12 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
 # zstyle ':fzf-tab:complete:cd:*' fzf-preview "ls --color=always \${realpath}"
+
+#------------------------------------------------------------------------------
+# Editor
+#------------------------------------------------------------------------------
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 #------------------------------------------------------------------------------
 # WIDGETS
@@ -337,5 +349,3 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
 	command rm -f -- "$tmp"
 }
-
-export EDITOR="nvim"
