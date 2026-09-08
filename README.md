@@ -148,6 +148,8 @@ tree
 yazi
 zoxide
 stow
+fd
+eza
 ```
 
 ### MacOS

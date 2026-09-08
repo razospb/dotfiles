@@ -195,32 +195,33 @@ alias back='cd -'       # Return to previous directory (toggles between last two
 alias home='cd ~'       # Navigate to home directory
 alias c='clear'         # Clear terminal contents
 
-# File Listing and Management
-# GNU coreutils
-if (( $+commands[gls] )); then
-  # macOS with Homebrew coreutils
-  alias ls='gls -F -G --color=auto --group-directories-first'
-  alias ll='gls -alh -G --color=auto --group-directories-first'
-  alias lt='gls --human-readable --color=auto --size -1 -S --classify'
-  alias lsr='gls --color=auto -t -1'
-  alias find='gfind'
-else
-  # Linux / systems with GNU coreutils as the default
-  alias ls='ls -F --color=auto --group-directories-first'
-  alias ll='ls -alh --color=auto --group-directories-first'
-  alias lt='ls --human-readable --color=auto --size -1 -S --classify'
-  alias lsr='ls --color=auto -t -1'
+#------------------------------------------------------------------------------
+# MODERN CLI REPLACEMENTS
+#------------------------------------------------------------------------------
+
+alias ls='eza --icons'
+alias ll='eza -lh --icons --git'
+alias la='eza -lah --icons --git'
+alias tree='eza --tree --icons --level'
+compdef eza=ls
+
+# Better cat (batcat on Ubuntu)
+if command -v bat >/dev/null 2>&1; then
+  alias cat='bat'
+elif command -v batcat >/dev/null 2>&1; then
+  alias bat='batcat'
+  alias cat='batcat'
 fi
 
-# Load custom GNU coreutils colors
-if (( $+commands[gdircolors] )); then
-  eval "$(gdircolors -b ~/.dircolors)"
-elif (( $+commands[dircolors] )); then
-  eval "$(dircolors -b ~/.dircolors)"
+if command -v fdfind >/dev/null 2>&1; then
+  alias fd='fdfind'
 fi
+
+alias grep='rg --color=auto'
+alias df='df -h'
+alias diff='diff --color=auto'
 
 # Universal aliases
-alias tree='tree -C --dirsfirst -L'
 alias mkdir='mkdir -pv'      # Create parent directories as needed, verbose output
 alias cp='cp -iv'      # Interactive and verbose copy
 alias mv='mv -iv'      # Interactive and verbose move
@@ -231,6 +232,16 @@ alias hosts='nvim /etc/hosts'      # Edit hosts file
 alias vimrc='nvim ~/.vimrc'      # Edit default vim configuration file
 alias zshrc='nvim ~/.zshrc'      # Edit bash configuration file
 alias sshconfig='nvim ~/.ssh/config'
+
+#------------------------------------------------------------------------------
+# PAGER
+#------------------------------------------------------------------------------
+
+if command -v bat >/dev/null 2>&1; then
+  export MANPAGER="bat -l man -p"
+elif command -v batcat >/dev/null 2>&1; then
+  export MANPAGER="batcat -l man -p"
+fi
 
 #------------------------------------------------------------------------------
 # CUSTOM zsh-interactive-cd PREVIEW
@@ -349,3 +360,4 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
 	command rm -f -- "$tmp"
 }
+
