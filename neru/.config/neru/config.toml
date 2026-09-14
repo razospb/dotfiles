@@ -43,14 +43,15 @@ text = "#E8EEFF"
 # ──────────────────────────────────────
 # Navigation modes
 # ──────────────────────────────────────
-"Ctrl+Shift+Cmd+Option+H" = "hints --action left_click --toggle"
+"Ctrl+Shift+Cmd+Option+J" = "hints --action left_click --toggle"
 "Ctrl+Shift+Cmd+Option+F" = "hints --search --action left_click --toggle"
-"Ctrl+Shift+Cmd+Option+J" = "hints --action right_click --toggle"
-"Ctrl+Shift+Cmd+Option+K" = "hints --action middle_click --toggle"
+"Ctrl+Shift+Cmd+Option+K" = "hints --action right_click --toggle"
+"Ctrl+Shift+Cmd+Option+L" = "hints --action middle_click --toggle"
+"Ctrl+Shift+Cmd+Option+;" = "hints --action left_click --modifier shift --toggle"
 
 "Ctrl+Shift+Cmd+Option+R" = "recursive_grid --cursor-selection-mode hold --toggle"
 "Ctrl+Shift+Cmd+Option+G" = "grid --cursor-selection-mode hold --toggle"
-"Ctrl+Shift+Cmd+Option+S" = "scroll --toggle"
+# "Ctrl+Shift+Cmd+Option+S" = "scroll --toggle"
 
 # Macros — named action sequences, reused from any binding.
 # Written by hand, not recorded. $1, $2 ... are the call's arguments.
@@ -201,8 +202,8 @@ enable_gc = false                           # Periodic memory cleanup (adds CPU 
 "`" = "toggle-cursor-follow-selection"
 "Backspace" = "action reset"
 "Enter" = "action backspace"
-"Shift+L" = "action left_click"
-"Shift+R" = "action right_click"
+"Shift+L" = "action left_click --modifier shift"
+"Shift+R" = "action right_click --modifier shift"
 "Shift+M" = "action middle_click"
 "Shift+I" = "action left_click --state down"
 "Shift+U" = "action left_click --state up"
@@ -229,7 +230,7 @@ background_color = "#33000000"
 enabled = true
 grid_cols = 3                               # Number of columns (>= 1)
 grid_rows = 3                               # Number of rows (>= 1)
-keys = "yuihjknm,"                          # Cell selection keys (must be grid_cols * grid_rows chars)
+keys = "rtyfghvbn"                          # Cell selection keys (must be grid_cols * grid_rows chars)
 min_size_width = 1                          # Stop subdividing below this width (px)
 min_size_height = 1                         # Stop subdividing below this height (px)
 max_depth = 10                              # Maximum recursion levels (1–20)
