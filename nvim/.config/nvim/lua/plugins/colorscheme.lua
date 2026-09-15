@@ -7,6 +7,9 @@ return {
     opts = {
       flavour = "mocha", -- latte, frappe, macchiato, mocha
       transparent_background = true,
+      float = {
+        transparent = true,
+      },
     },
   },
 
@@ -14,7 +17,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "catppuccin-nvim",
     },
   },
 }
