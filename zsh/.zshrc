@@ -230,10 +230,10 @@ alias cdse='cd /home/sbrazo/docker/secrets' # Navigate to the Stacks folder
 # MODERN CLI REPLACEMENTS
 #------------------------------------------------------------------------------
 
-alias ls='eza --icons=always'
-alias ll='eza -lh --icons=always --git'
-alias la='eza -lah --icons=always --git'
-alias tree='eza --tree --icons=always --level'
+alias ls='eza --icons'
+alias ll='eza -lh --icons --git'
+alias la='eza -lah --icons --git'
+alias tree='eza --tree --icons --level'
 compdef eza=ls
 
 # Better cat (batcat on Ubuntu)
