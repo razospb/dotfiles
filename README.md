@@ -140,6 +140,8 @@ The configuration assumes the following programs are available:
 
 ```text
 zsh
+oh-my-zsh
+powerlevel10k
 git
 neovim
 fzf
