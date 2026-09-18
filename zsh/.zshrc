@@ -362,6 +362,10 @@ _zic_complete() {
 # CUSTOM FUNCTIONS
 #------------------------------------------------------------------------------
 
+# Define a helper function to open and disown apps
+launch() {
+  "$@" >/dev/null 2>&1 &!
+}
 
 # Find files/directories in the current directory only
 findfile() {
