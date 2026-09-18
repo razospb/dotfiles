@@ -230,7 +230,7 @@ alias cdse='cd /home/sbrazo/docker/secrets' # Navigate to the Stacks folder
 # MODERN CLI REPLACEMENTS
 #------------------------------------------------------------------------------
 
-alias ls='eza --icons'
+alias ls='eza --icons=auto'
 alias ll='eza -lh --icons --git'
 alias la='eza -lah --icons --git'
 alias tree='eza --tree --icons --level'
