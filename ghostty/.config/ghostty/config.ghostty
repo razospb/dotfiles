@@ -3,14 +3,14 @@
 # https://github.com/imrajyavardhan12/spectre-ghostty-config
 
 # Fonts
-font-size = 17.5
+font-size = 13
 
 # Window
 background-opacity = 0.9
 background-blur = 90
-window-padding-y = 10
+window-padding-y = 0
 window-padding-balance = true
-window-padding-x = 20
+window-padding-x = 0
 unfocused-split-opacity = 0.6
 unfocused-split-fill = #000000
 split-divider-color = #ffffff
