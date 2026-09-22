@@ -183,7 +183,7 @@ bindkey '^x^e' edit-command-line
 # DOCKER
 #------------------------------------------------------------------------------
 alias dps='sudo docker ps'            # List all containers (running)
-alias dpsa='sduo docker ps -a'        # LIst all containers (running and stopped)
+alias dpsa='sudo docker ps -a'        # LIst all containers (running and stopped)
 alias dpss='sudo docker ps -a --format "table {{.Names}}\t{{.State}}\t{{.Status}}\t{{.Ports}}" | (sed -u 1q; sort)'
 alias ddf='sudo docker system df'     # Show Docker disk usage for containers, images, and volumes
 alias dexec='sudo docker exec -it'    # Execute command in running container (interactive mode)
