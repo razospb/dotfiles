@@ -11,6 +11,10 @@ return {
         transparent = true,
       },
     },
+    config = function(_, opts)
+      require("catppuccin").setup(opts)
+      vim.cmd.colorscheme("catppuccin-nvim")
+    end,
   },
 
   -- 2. Tell LazyVim to activate it
