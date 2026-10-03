@@ -56,6 +56,14 @@ return {
       -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
+        -- ESC to clear search and dismiss noice
+        ["<ESC>"] = {
+          function()
+            vim.cmd "nohlsearch"
+            vim.cmd "NoiceDismiss"
+          end,
+          desc = "Clear search highlights",
+        },
 
         -- navigate buffer tabs
         ["<S-l>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
