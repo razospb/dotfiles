@@ -226,6 +226,8 @@ alias cdda='cd /home/sbrazo/docker/data' # Navigate to the Data folder
 alias cdst='cd /home/sbrazo/docker/stacks' # Navigate to the Stacks folder
 alias cdse='cd /home/sbrazo/docker/secrets' # Navigate to the Stacks folder
 
+alias venv='source .venv/bin/activate'
+
 #------------------------------------------------------------------------------
 # MODERN CLI REPLACEMENTS
 #------------------------------------------------------------------------------
