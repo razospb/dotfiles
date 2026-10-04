@@ -227,6 +227,7 @@ alias cdst='cd /home/sbrazo/docker/stacks' # Navigate to the Stacks folder
 alias cdse='cd /home/sbrazo/docker/secrets' # Navigate to the Stacks folder
 
 alias venv='source .venv/bin/activate'
+alias lg='lazygit'
 
 #------------------------------------------------------------------------------
 # MODERN CLI REPLACEMENTS
