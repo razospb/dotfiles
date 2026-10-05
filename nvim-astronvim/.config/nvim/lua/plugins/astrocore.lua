@@ -56,6 +56,7 @@ return {
       -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
+
         -- ESC to clear search and dismiss noice
         ["<ESC>"] = {
           function()
@@ -65,6 +66,7 @@ return {
           desc = "Clear search highlights",
         },
 
+        -- NOTE: something
         -- navigate buffer tabs
         ["<S-l>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["<S-h>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
@@ -85,6 +87,15 @@ return {
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+      },
+      v = {
+        ["<Leader>m"] = {
+          desc = "Discard",
+        },
+        ["<Leader>md"] = {
+          '"_d',
+          desc = "Black-hole delete",
+        },
       },
     },
   },
