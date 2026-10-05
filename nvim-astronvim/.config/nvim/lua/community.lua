@@ -20,4 +20,6 @@ return {
   { import = "astrocommunity.pack.rainbow-delimiter-indent-blankline" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.yaml" },
+  -- Markdown
+  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 }
