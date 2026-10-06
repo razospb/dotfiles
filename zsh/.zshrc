@@ -180,6 +180,24 @@ zle -N edit-command-line
 bindkey '^x^e' edit-command-line
 
 #------------------------------------------------------------------------------
+# TMUX ALIASES
+#------------------------------------------------------------------------------
+
+# Sessions
+alias tmls='tmux ls'
+alias tmnew='tmux new -s'
+alias tmatt='tmux attach -t'
+alias tmnewa='tmux new -As'
+alias tmkill='tmux kill-session -t'
+
+# Attach / switch
+alias tma='tmux attach'
+alias tms='tmux switch-client -t'
+
+# Kill
+alias tmkillall='tmux kill-server'
+
+#------------------------------------------------------------------------------
 # DOCKER
 #------------------------------------------------------------------------------
 alias dps='sudo docker ps'            # List all containers (running)
