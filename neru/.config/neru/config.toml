@@ -115,26 +115,28 @@ ignore_clickable_check = false
 visible_check_enabled = false
 
 [hints.hotkeys]
+# Mode-Specific
 "Escape" = "idle"
-# Search
 "/" = "action search_hints"
+
+# Shared Hotkeys
 "Enter" = "action backspace"
-"Tab" = "action cycle_hint"
-"Shift+Tab" = "action cycle_hint --backward"
-"Shift+L" = "action left_click"
-"Shift+R" = "action right_click"
-"Shift+M" = "action middle_click"
-"Shift+I" = "action left_click --state down"
-"Shift+U" = "action left_click --state up"
-"Up" = "action move_mouse_relative --dx=0 --dy=-10"
-"Down" = "action move_mouse_relative --dx=0 --dy=10"
-"Left" = "action move_mouse_relative --dx=-10 --dy=0"
-"Right" = "action move_mouse_relative --dx=10 --dy=0"
 
 # Mouse buttons
 "Space" = "action left_click"
-"Shift+Space" = "action right_click"
-"Ctrl+Space" = "action middle_click"
+"Shift+Space" = "action left_click --modifier shift"
+"Ctrl+Space" = "action right_click"
+"Shift+;" = "action left_click --modifier cmd"
+
+# Mouse button states
+"Shift+I" = "action left_click --state down"
+"Shift+U" = "action left_click --state up"
+
+# Mouse movement — Vim style
+"Shift+H" = "action move_mouse_relative --dx=-10 --dy=0"
+"Shift+J" = "action move_mouse_relative --dx=0 --dy=10"
+"Shift+K" = "action move_mouse_relative --dx=0 --dy=-10"
+"Shift+L" = "action move_mouse_relative --dx=10 --dy=0"
 
 [hints.ui]
 font_size = 10
@@ -203,22 +205,26 @@ enable_gc = false        # Periodic memory cleanup (adds CPU overhead)
 "Escape" = "idle"
 "`" = "toggle-cursor-follow-selection"
 "Backspace" = "action reset"
+"Shift+D" = "action move_mouse"
+
+# Shared Hotkeys
 "Enter" = "action backspace"
-"Shift+L" = "action left_click --modifier shift"
-"Shift+R" = "action right_click --modifier shift"
-"Shift+M" = "action middle_click"
-"Shift+I" = "action left_click --state down"
-"Shift+U" = "action left_click --state up"
-"Up" = "action move_mouse_relative --dx=0 --dy=-10"
-"Down" = "action move_mouse_relative --dx=0 --dy=10"
-"Left" = "action move_mouse_relative --dx=-10 --dy=0"
-"Right" = "action move_mouse_relative --dx=10 --dy=0"
 
 # Mouse buttons
-"Shift+D" = "action move_mouse"
 "Space" = "action left_click"
-"Shift+Space" = "action right_click"
-"Ctrl+Space" = "action middle_click"
+"Shift+Space" = "action left_click --modifier shift"
+"Ctrl+Space" = "action right_click"
+"Shift+;" = "action left_click --modifier cmd"
+
+# Mouse button states
+"Shift+I" = "action left_click --state down"
+"Shift+U" = "action left_click --state up"
+
+# Mouse movement — Vim style
+"Shift+H" = "action move_mouse_relative --dx=-10 --dy=0"
+"Shift+J" = "action move_mouse_relative --dx=0 --dy=10"
+"Shift+K" = "action move_mouse_relative --dx=0 --dy=-10"
+"Shift+L" = "action move_mouse_relative --dx=10 --dy=0"
 
 [grid.ui]
 font_size = 14
@@ -242,27 +248,31 @@ enabled = true   # Opt out from native depth transition animation on supported p
 duration_ms = 50 # Recursive-grid animation duration in milliseconds
 
 [recursive_grid.hotkeys]
+# Mode-Specific
+
 "Escape" = "idle"
 "`" = "toggle-cursor-follow-selection"
 "Backspace" = "action reset"
+"Shift+D" = "action move_mouse"
+
+# Shared Hotkeys
 "Enter" = "action backspace"
-"Shift+L" = "action left_click"
-"Shift+R" = "action right_click"
-"Shift+M" = "action middle_click"
-"Shift+I" = "action left_click --state down"
-"Shift+U" = "action left_click --state up"
-"Up" = "action move_mouse_relative --dx=0 --dy=-10"
-"Down" = "action move_mouse_relative --dx=0 --dy=10"
-"Left" = "action move_mouse_relative --dx=-10 --dy=0"
-"Right" = "action move_mouse_relative --dx=10 --dy=0"
 
 # Mouse buttons
-
-"Shift+D" = "action move_mouse"
 "Space" = "action left_click"
-"Shift+Space" = "action right_click"
-"Ctrl+Space" = "action middle_click"
+"Shift+Space" = "action left_click --modifier shift"
+"Ctrl+Space" = "action right_click"
+"Shift+;" = "action left_click --modifier cmd"
 
+# Mouse button states
+"Shift+I" = "action left_click --state down"
+"Shift+U" = "action left_click --state up"
+
+# Mouse movement — Vim style
+"Shift+H" = "action move_mouse_relative --dx=-10 --dy=0"
+"Shift+J" = "action move_mouse_relative --dx=0 --dy=10"
+"Shift+K" = "action move_mouse_relative --dx=0 --dy=-10"
+"Shift+L" = "action move_mouse_relative --dx=10 --dy=0"
 
 [recursive_grid.ui]
 line_width = 1
