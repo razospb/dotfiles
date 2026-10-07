@@ -191,10 +191,11 @@ generic_clickable_min_confidence = 0.5 # Minimum confidence for generic clickabl
 enabled = true
 
 characters = "asdfghjkl" # Primary grid labels
+# characters = "asdfghjkl" # Primary grid labels
 # row_labels = "asdfghjkl"
 # col_labels = "asdfghjkl"
 sublayer_keys = "asdfghjkl"
-max_label_length = 4
+max_label_length = 3
 
 live_match_update = true # Highlight cells as you type
 hide_unmatched = true    # Hide non-matching cells
