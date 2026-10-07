@@ -185,9 +185,8 @@ bindkey '^x^e' edit-command-line
 
 # Sessions
 alias tmls='tmux ls'
-alias tmnew='tmux new -s'
 alias tmatt='tmux attach -t'
-alias tmnewa='tmux new -As'
+alias tmnew='tmux new -As'
 alias tmkill='tmux kill-session -t'
 
 # Attach / switch
