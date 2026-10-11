@@ -89,13 +89,17 @@ return {
         -- ["<C-S>"] = false,
       },
       v = {
-        ["<Leader>m"] = {
-          desc = "Discard",
-        },
-        ["<Leader>md"] = {
-          '"_d',
-          desc = "Black-hole delete",
-        },
+        ["<Leader>m"] = { desc = "Discard" },
+        ["<Leader>md"] = { '"_d', desc = "Black-hole delete" },
+        -- More sane indentation mappigs
+        ["<"] = { "<gv", desc = "Unindent and keep selection" },
+        [">"] = { ">gv", desc = "Indent and keep selection" },
+        -- Move lines in visual selection
+        ["J"] = { ":m '>+1<CR>gv=gv", desc = "Move lines down in visual selection" },
+        ["K"] = { ":m '<-2<CR>gv=gv", desc = "Move lines up in visual selection" },
+      },
+      x = {
+        ["p"] = { [["_dP]], desc = "Paste over selection without losing yanked text" },
       },
     },
   },
