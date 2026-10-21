@@ -44,14 +44,14 @@ text = "#E8EEFF"
 # ──────────────────────────────────────
 # Navigation modes
 # ──────────────────────────────────────
-"Ctrl+Shift+Cmd+Option+J" = "hints --action left_click --toggle --repeat"
-"Ctrl+Shift+Cmd+Option+F" = "hints --search --action left_click --toggle"
-"Ctrl+Shift+Cmd+Option+K" = "hints --action right_click --toggle"
-"Ctrl+Shift+Cmd+Option+L" = "hints --action middle_click --toggle"
-"Ctrl+Shift+Cmd+Option+;" = "hints --action left_click --modifier shift --toggle"
+"Ctrl+Cmd+Option+J" = "hints --action left_click --toggle --repeat"
+"Ctrl+Cmd+Option+F" = "hints --search --action left_click --toggle"
+"Ctrl+Cmd+Option+K" = "hints --action right_click --toggle"
+"Ctrl+Cmd+Option+L" = "hints --action middle_click --toggle"
+"Ctrl+Cmd+Option+;" = "hints --action left_click --modifier shift --toggle"
 
-"Ctrl+Shift+Cmd+Option+R" = "recursive_grid --cursor-selection-mode hold --toggle"
-"Ctrl+Shift+Cmd+Option+G" = "grid --cursor-selection-mode hold --toggle"
+"Ctrl+Cmd+Option+R" = "recursive_grid --cursor-selection-mode hold --toggle"
+"Ctrl+Cmd+Option+G" = "grid --cursor-selection-mode hold --toggle"
 # "Ctrl+Shift+Cmd+Option+S" = "scroll --toggle"
 
 # Macros — named action sequences, reused from any binding.
