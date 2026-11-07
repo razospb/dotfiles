@@ -6,11 +6,11 @@
 font-size = 20
 
 # Window
-background-opacity = 0.9
-background-blur = 90
-window-padding-y = 0
+background-opacity = 0.90
+#background-blur = 47  # disabled by ghostty-config: blur off is the default
+#window-padding-y = 0  # disabled by ghostty-config: back to the default
 window-padding-balance = true
-window-padding-x = 0
+#window-padding-x = 0  # disabled by ghostty-config: back to the default
 unfocused-split-opacity = 0.6
 unfocused-split-fill = #000000
 split-divider-color = #ffffff
@@ -32,3 +32,20 @@ keybind = ctrl+super+j=resize_split:down,10
 keybind = ctrl+super+h=resize_split:left,10
 keybind = ctrl+super+l=resize_split:right,10
 keybind = ctrl+super+==equalize_splits
+
+# ghostty-designer: saved settings
+font-family = JetBrainsMono Nerd Font Mono
+#font-feature = +ss02  # disabled by ghostty-config: ss02 turned off
+font-feature = +zero
+adjust-font-baseline = 0
+adjust-underline-position = 0
+adjust-underline-thickness = 0
+adjust-strikethrough-position = 0
+adjust-strikethrough-thickness = 0
+adjust-overline-position = 0
+adjust-box-thickness = 0
+adjust-icon-height = 0
+macos-icon = xray
+
+# ghostty-designer: live preview, keep below other config-file lines
+config-file = ?ghostty-designer.conf
