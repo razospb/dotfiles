@@ -94,6 +94,7 @@ on-mode-changed = []
 on-window-detected = [
   # Make mouseless float on open
   { if = "test %{app-bundle-id} = net.sonuscape.mouseless", run = "layout floating" },
+  { if = "test %{app-bundle-id} = com.apple.finder", run = "layout floating" },
 ]
 
 focus-follows-mouse.enabled = false
